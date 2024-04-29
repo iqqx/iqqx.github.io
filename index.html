@@ -8,6 +8,7 @@
     <title>Калькулятор</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
     <script src="script.js"></script>
 </head>
 
@@ -17,59 +18,76 @@
         <span id="display-output">10</span>
     </div>
     <div id="keyboard">
-        <button>C</button>
-        <div>
-            <button class="tr" id="keyboard-tl">0</button>
-            <div></div>
-            <button class="tr">÷</button>
-            <div></div>
-            <button class="tr">×</button>
-            <div></div>
-            <button class="tr rc" id="keyboard-tr">=</button>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <button>1</button>
-            <div></div>
-            <button>2</button>
-            <div></div>
-            <button>3</button>
-            <div></div>
-            <button class="rc">+</button>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <button>4</button>
-            <div></div>
-            <button>5</button>
-            <div></div>
-            <button>6</button>
-            <div></div>
-            <button class="rc">-</button>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <button id="keyboard-bl">7</button>
-            <div></div>
-            <button>8</button>
-            <div></div>
-            <button>9</button>
-            <div></div>
-            <button class="rc" id="keyboard-br">.</button>
+        <div class="mobile-keyboard">
+            <button>C</button>
+            <div style="width: 190px;"></div>
+            <button>⌫</button>
         </div>
-        <button>⌫</button>
+
+        <div>
+            <button class="desktop-keyboard">C</button>
+            <button>0</button>
+            <button>÷</button>
+            <button>×</button>
+            <button>=</button>
+            <button class="desktop-keyboard">⌫</button>
+        </div>
+
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+        </div>
+
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+        </div>
+
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>.</button>
+        </div>
+
+        <!-- <div class="desktop-keyboard">
+            <button>C</button>
+        </div>
+
+        <div>
+            <button class="mobile-keyboard">C</button>
+            <button>0</button>
+            <button>1</button>
+            <button>4</button>
+            <button>7</button>
+        </div>
+        <div>
+            <button>÷</button>
+            <button>2</button>
+            <button>5</button>
+            <button>8</button>
+        </div>
+        <div>
+            <button>×</button>
+            <button>3</button>
+            <button>6</button>
+            <button>9</button>
+        </div>
+        <div>
+            <button class="mobile-keyboard">⌫</button>
+            <button>=</button>
+            <button>+</button>
+            <button>-</button>
+            <button>.</button>
+        </div>
+
+        <div>
+            <button class="desktop-keyboard">⌫</button>
+        </div> -->
     </div>
 </body>
 
