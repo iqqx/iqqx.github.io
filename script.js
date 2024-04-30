@@ -5,7 +5,7 @@ const output = document.getElementById("display-output");
 for (const button of a) {
   button.onclick = () => {
     if (
-      "+-÷×.".includes(button.innerHTML) &&
+      "+-÷×.0".includes(button.innerHTML) &&
       "+-÷×.".includes(input.innerHTML[input.innerHTML.length - 1])
     ) {
       input.innerHTML = input.innerHTML.substring(
@@ -29,18 +29,23 @@ for (const button of a) {
         );
         break;
       case "=":
-        input.innerHTML = output.innerHTML.includes("t")
-          ? "0"
-          : output.innerHTML;
+        input.innerHTML =
+          output.innerHTML.includes("t") || output.innerHTML.includes("a")
+            ? "0"
+            : output.innerHTML;
         break;
       default:
         input.innerHTML += button.innerHTML;
         break;
     }
 
-    let evaled = input.innerHTML.replace("÷", "/").replace("×", "*");
-    if ("+-÷×.".includes(evaled[input.innerHTML.length - 1]))
+    let evaled = input.innerHTML.replace(/÷/g, "/").replace(/×/g, "*");
+    if ("+-÷×.0".includes(evaled[input.innerHTML.length - 1]))
       evaled = evaled.substring(0, evaled.length - 1);
+    if ("+-/*".includes(evaled[0])) evaled = evaled.substring(1);
+    if ("+-/*".includes(evaled[evaled.length - 1]))
+      evaled = evaled.substring(0, evaled.length - 1);
+    if (evaled === "") evaled = "0";
 
     output.innerHTML = eval(evaled);
   };
