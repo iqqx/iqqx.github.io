@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Wix Madefor Text";
+    src: url("../Fonts/WixMadeforText.woff") format("woff");
+    src: url("../Fonts/WixMadeforText.ttf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: Wix Madefor Text;
+
+    color: white;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#error-popup {
+    opacity: 0;
+    position: fixed;
+    z-index: 5164;
+    bottom: 10px;
+    width: 100%;
+    background-color: red;
+    padding: 10px 100px;
+    pointer-events: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    background-color: #3C3C3C;
+
+    --PrimaryBackgroundAlpha: rgba(120, 255, 165, 0.267);
+}
+
+header {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    background: url(../Images/header.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    width: 100%;
+    height: 100px;
+
+    text-align: center;
+}
+
+header>h1>a {
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 15px white;
+}
+
+#header-back-fake {
+    position: absolute;
+    top: 0;
+
+    left: calc(50% - 560px / 2);
+    z-index: 0;
+
+    width: 560px;
+    height: 100%;
+
+    clip-path: url(#header-back);
+    backdrop-filter: blur(15px);
+}
+
+#header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    list-style: none;
+}
+
+#header-menu li {
+    background-color: #0048FF;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+    padding: 5px 25px;
+
+    font-size: 12px;
+
+    box-shadow: -4px 4px 5px 1px rgba(0, 0, 0, 0.25);
+
+    transition: background-color .25s ease-in-out;
+}
+
+#header-menu li a {
+    text-decoration: none;
+}
+
+#header-menu li:hover {
+    background-color: #ffffff46;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+
+    background: #383838;
+    height: 80px;
+    width: 100%;
+}
+
+footer>h5:nth-child(1),
+footer>div {
+    flex-basis: 0;
+}

@@ -1,0 +1,141 @@
+#background-image {
+    height: 100vh;
+    width: 100vw;
+}
+
+video {
+    display: block;
+    object-fit: fill;
+}
+
+#block-1 {
+    position: absolute;
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 200px;
+
+    width: 100%;
+    gap: 150px;
+}
+
+.sfx {
+    /* background: linear-gradient(90deg, #FFFFFF, #FF0000, #FFFFFF); */
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+#block-1-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+    box-shadow: 0 0 15px 9px rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(15px);
+    background: var(--PrimaryBackgroundAlpha);
+    padding: 20px 100px;
+
+    text-align: center;
+}
+
+#block-1-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+    box-shadow: 0 0 15px 9px rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(15px);
+    background: var(--PrimaryBackgroundAlpha);
+
+    gap: 50px;
+    width: calc(2 * 300px + 3 * 50px);
+    height: 150px;
+
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: linear-gradient(90deg, rgb(27, 27, 27), rgb(16, 55, 39) 5%, rgb(56, 97, 81), rgb(16, 55, 39) 95%, rgb(27, 27, 27));
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.block h1 {
+    position: relative;
+
+    text-shadow: 0px 0px 10px black;
+
+    text-transform: uppercase;
+}
+
+.block h1::before {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+
+    content: "";
+    background: black;
+    width: 50px;
+    height: 1px;
+}
+
+.block h1::after {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+
+    content: "";
+    background: black;
+    width: 50px;
+    height: 1px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 200%;
+}
+
+button {
+    position: relative;
+
+    font-size: 36px;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1) inset, 0px 0px 5px 0px rgba(255, 255, 255, 1);
+
+    cursor: pointer;
+
+    width: 300px;
+    height: 50px;
+
+    transition: .25s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffffff34;
+}
+
+.spliter {
+    height: 0;
+    width: 100%;
+
+    background: black;
+
+    border-bottom: white dashed 1px;
+}
