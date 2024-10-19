@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!--Non visible, for header blur-->
-<svg style="position: absolute;" xmlns="http://www.w3.org/2000/svg">
-    <clipPath id="header-back">
-        <path
-            d="M30 30V50L30 70C30 86.5685 43.4315 100 60 100H500C516.569 100 530 86.5685 530 70V50V30C530 13.4315 543.431 0 560 0H0C16.5685 0 30 13.4315 30 30Z" />
-    </clipPath>
-</svg>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +13,14 @@
 </head>
 
 <body>
+    <!--Non visible, for header blur-->
+    <svg style="position: absolute;" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="header-back">
+            <path
+                d="M30 30V50L30 70C30 86.5685 43.4315 100 60 100H500C516.569 100 530 86.5685 530 70V50V30C530 13.4315 543.431 0 560 0H0C16.5685 0 30 13.4315 30 30Z" />
+        </clipPath>
+    </svg>
+    
     <video id="background-image" src="back1.mp4" autoplay muted loop></video>
     <div id="header-back-fake"></div>
     <header>
